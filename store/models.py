@@ -16,6 +16,9 @@ class Product(models.Model):
     crated_date = models.DateTimeField(auto_now_add=True)
     modified_date = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        ordering = ("-crated_date",)
+
     def __str__(self):
         return self.name
 
